@@ -1,0 +1,155 @@
+/* Shared by the public site and staff workspace. CSS follows device changes live. */
+:root {
+  color-scheme: light;
+  --canvas: #ffffff;
+  --paper: #e7ebf0;
+  --surface: #ffffff;
+  --procedure-card: #ffffff;
+  --procedure-border: #b8c3d1;
+  --procedure-hover: #f8faff;
+  --ink: #242a33;
+  --muted: #596171;
+  --blue: #245ee7;
+  --blue-soft: #eef2fa;
+  --action: #245ee7;
+  --action-hover: #1749c7;
+  --line: #dfe2e8;
+  --line-hover: #98a5b7;
+  --input: #fafbfc;
+  --input-line: #c9d0dc;
+  --placeholder: #637187;
+  --navy: #22262d;
+  --selection: #cddcff;
+  --error: #a52b36;
+  --error-surface: #fff4f4;
+  --error-line: #f1cace;
+  --warning: #6b5311;
+  --warning-surface: #fff4d5;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme]) {
+    color-scheme: dark;
+    --canvas: #14171c;
+    --paper: #282e37;
+    --surface: #343c48;
+  --procedure-card: #11161d;
+  --procedure-border: #687588;
+  --procedure-hover: #1a2430;
+    --ink: #edf0f5;
+    --muted: #b5bdc9;
+    --blue: #94b8ff;
+    --blue-soft: #293447;
+    --line: #495361;
+    --line-hover: #718096;
+    --input: #1b1f26;
+    --input-line: #5c687a;
+    --placeholder: #abb5c4;
+    --navy: #0d1015;
+    --selection: #354767;
+    --error: #ffb6be;
+    --error-surface: #3b222d;
+    --error-line: #74404e;
+    --warning: #f7d482;
+    --warning-surface: #3d3420;
+  }
+}
+
+/* The same dark palette when a saved choice overrides the device preference. */
+:root[data-theme="dark"] {
+  color-scheme: dark;
+  --canvas: #14171c;
+  --paper: #282e37;
+  --surface: #343c48;
+  --procedure-card: #11161d;
+  --procedure-border: #687588;
+  --procedure-hover: #1a2430;
+  --ink: #edf0f5;
+  --muted: #b5bdc9;
+  --blue: #94b8ff;
+  --blue-soft: #293447;
+  --line: #495361;
+  --line-hover: #718096;
+  --input: #1b1f26;
+  --input-line: #5c687a;
+  --placeholder: #abb5c4;
+  --navy: #0d1015;
+  --selection: #354767;
+  --error: #ffb6be;
+  --error-surface: #3b222d;
+  --error-line: #74404e;
+  --warning: #f7d482;
+  --warning-surface: #3d3420;
+}
+
+.theme-picker {
+  display: none;
+  position: relative;
+  flex-shrink: 0;
+  font-family: var(--app-font-sans, sans-serif);
+}
+:root[data-theme] .theme-picker {
+  display: block;
+}
+.theme-picker > summary {
+  display: grid;
+  place-items: center;
+  list-style: none;
+  cursor: pointer;
+  width: 44px;
+  height: 44px;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  color: inherit;
+  background: transparent;
+}
+.theme-picker > summary::-webkit-details-marker {
+  display: none;
+}
+.theme-options {
+  position: absolute;
+  z-index: 50;
+  top: calc(100% + 10px);
+  right: 0;
+  width: 190px;
+  padding: 8px;
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  background: var(--surface);
+  color: var(--ink);
+  box-shadow: 0 12px 36px #10131930;
+}
+.theme-options p {
+  font-size: 11px;
+  color: var(--muted);
+  margin: 5px 10px 7px;
+  line-height: 1.5;
+}
+.theme-options button {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  width: 100%;
+  min-height: 44px;
+  padding: 10px;
+  border: 0;
+  border-radius: 8px;
+  background: transparent;
+  color: var(--ink);
+  font: 500 14px/1.5 var(--app-font-sans, sans-serif);
+  cursor: pointer;
+}
+.theme-options button:hover {
+  background: var(--paper);
+}
+.theme-options button[aria-pressed="true"] {
+  color: var(--blue);
+  background: var(--blue-soft);
+}
+.theme-check {
+  visibility: hidden;
+}
+[aria-pressed="true"] > .theme-check {
+  visibility: visible;
+}

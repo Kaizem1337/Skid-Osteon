@@ -1,0 +1,9 @@
+{
+  "fetched": 65,
+  "failures": [
+    {
+      "url": "https://osteon.cc/cdn-cgi/l/email-protection",
+      "error": "Error: HTTP 404"
+    }
+  ]
+}

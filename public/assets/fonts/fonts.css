@@ -1,0 +1,5 @@
+/* Reference font families from the official Google Fonts repository. */
+@font-face{font-family:"DM Mono";font-style:normal;font-weight:500;font-display:swap;src:url("/assets/fonts/DMMono-Medium.ttf") format("truetype");}
+@font-face{font-family:"DM Mono";font-style:normal;font-weight:400;font-display:swap;src:url("/assets/fonts/DMMono-Regular.ttf") format("truetype");}
+@font-face{font-family:"DM Sans";font-style:normal;font-weight:100 900;font-display:swap;src:url("/assets/fonts/DMSans.woff2") format("woff2"),url("/assets/fonts/DMSans.ttf") format("truetype");}
+@font-face{font-family:"Fraunces";font-style:normal;font-weight:100 900;font-display:swap;src:url("/assets/fonts/Fraunces.ttf") format("truetype");}

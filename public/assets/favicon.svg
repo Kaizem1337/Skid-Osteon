@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="none">
+  <style>
+    .crescent { fill: #4da2fc; }
+    .ring { stroke: #2b7fff; stroke-width: 7.5; }
+    @media (prefers-color-scheme: light) {
+      .crescent { fill: #1d4ed8; }
+      .ring { stroke: #2563eb; stroke-width: 7.5; }
+    }
+  </style>
+  <path class="crescent" d="M 17.45 96.30 A 115.00 115.00 0 0 1 238.55 96.30 A 132.69 132.69 0 0 0 17.45 96.30 Z" />
+  <path class="crescent" d="M 17.45 159.70 A 115.00 115.00 0 0 0 238.55 159.70 A 132.69 132.69 0 0 1 17.45 159.70 Z" />
+  <circle class="ring" cx="128" cy="128" r="66" />
+  <circle class="ring" cx="128" cy="128" r="47" />
+</svg>
